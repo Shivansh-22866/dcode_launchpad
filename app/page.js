@@ -270,7 +270,7 @@ function Hero(){
               <span className="text-zinc-400 text-sm">ASSET SLOT — Hero Image/Video (team + product collage)</span>
             </div>
             <div className="pointer-events-none absolute -bottom-6 -left-6 hidden h-28 w-28 rounded-2xl bg-[var(--lime)]/20 blur-2xl md:block"/> */}
-            <img src={"/hero.png"} className=" scale-[1.4]" />
+            <img src={"https://res.cloudinary.com/dnafhcsfp/image/upload/v1762438800/hero_dxxnal.png"} className=" scale-[1.4]" />
           </motion.div>
         </div>
       </Section>
@@ -313,9 +313,20 @@ function Band(){
 
 /* ----------------------------- Partners/Projects ---------------------------- */
 function PartnersProjects(){
-  const partners = ["/vercel.png","/cyrene.png","/buidlguidl.png","/sailfish.png","/onairos.png","/yardhub.png","/educhain.png"];
+  const partners = [
+    "https://res.cloudinary.com/dnafhcsfp/image/upload/v1762438794/vercel_rv09a6.png",
+    "https://res.cloudinary.com/dnafhcsfp/image/upload/v1762438795/cyrene_bpf11z.png",
+    "https://res.cloudinary.com/dnafhcsfp/image/upload/v1762438794/buidlguidl_md6lzy.png",
+    "https://res.cloudinary.com/dnafhcsfp/image/upload/v1762438794/sailfish_bosyd1.png",
+    "https://res.cloudinary.com/dnafhcsfp/image/upload/v1762438793/onairos_wrtbqn.png",
+    "https://res.cloudinary.com/dnafhcsfp/image/upload/v1762438796/yardhub_e9lko6.png",
+    "https://res.cloudinary.com/dnafhcsfp/image/upload/v1762438796/educhain_ptjpmw.png"];
   const projects = ["Aytes","Senku’s Elixir","Signiq","Cromafun","CrossFund"];
-  const projectBanners = ["/aytes.png","/senku.png","/signiq.png","/croma.png","/crossfund.png"];
+  const projectBanners = ["https://res.cloudinary.com/dnafhcsfp/image/upload/v1762438802/aytes_euwfat.png",
+    "https://res.cloudinary.com/dnafhcsfp/image/upload/v1762438802/senku_oibjlw.png",
+    "https://res.cloudinary.com/dnafhcsfp/image/upload/v1762438804/signiq_yxls8h.png",
+    "https://res.cloudinary.com/dnafhcsfp/image/upload/v1762438800/croma_lndqog.png",
+    "https://res.cloudinary.com/dnafhcsfp/image/upload/v1762438801/crossfund_az5jbk.png"];
   const projectLinks = ["https://aytes.xyz","https://senkuselixir.xyz","https://signiq.xyz","https://cromafun.app","https://crossfund.xyz"];
   return (
     <Section id="partners" className="py-16">
@@ -448,8 +459,8 @@ function Pillars(){
 /* -------------------------------- Join Paths ------------------------------- */
 function JoinPaths(){
   const cards = [
-    { t: "Hackathon Track", d: "Top performers from DcodeBlock hackathons are invited directly into the Sprint.", a: "Get invited", href: "https://dcodeblock.com/compete/hackathon" },
-    { t: "Direct Application Path", d: "Missed the hackathon but ready to launch? Apply → shortlist → interview → Sprint.", a: "Apply now", href: "https://t.co/WMiU1WN8ow" },
+    { t: "Hackathon Track", d: "Top performers from DcodeBlock hackathons are invited directly into the Sprint.", a: "Get invited", href: "https://dcodeblock.com/compete/hackathon", img: "/hackathon.svg" },
+    { t: "Direct Application Path", d: "Missed the hackathon but ready to launch? Apply → shortlist → interview → Sprint.", a: "Apply now", href: "https://t.co/WMiU1WN8ow", img: "/direct-appln.svg" },
   ];
   return (
     <Section id="join" className="py-16">
@@ -457,7 +468,8 @@ function JoinPaths(){
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {cards.map((c,i)=> (
           <TiltCard key={i}>
-            <div className="mb-2 text-lg font-semibold">{c.t}</div>
+            <img src={c.img} className="h-18 w-18 mb-2" />
+            <div className="mb-1 text-lg font-semibold">{c.t}</div>
             <p className="text-sm text-zinc-300">{c.d}</p>
             <div className="mt-5"><ShinyButton href={c.href}>{c.a}</ShinyButton></div>
           </TiltCard>
@@ -628,7 +640,7 @@ function Footer(){
           </div>
           <div>
             <div className="mb-2 text-sm font-semibold">Contact</div>
-            <p className="text-xs text-zinc-400">team@dcodeblock.com</p>
+            <a href="mailto:rasesh@dcodeblock.com" className="text-xs text-zinc-400">rasesh@dcodeblock.com</a>
             <div className="mt-3 text-xs text-zinc-500">© {new Date().getFullYear()} DcodeBlock</div>
           </div>
         </div>
