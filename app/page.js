@@ -270,7 +270,7 @@ function Hero(){
               <span className="text-zinc-400 text-sm">ASSET SLOT — Hero Image/Video (team + product collage)</span>
             </div>
             <div className="pointer-events-none absolute -bottom-6 -left-6 hidden h-28 w-28 rounded-2xl bg-[var(--lime)]/20 blur-2xl md:block"/> */}
-            <img src={"/hero.png"} className=" scale-[1.3]" />
+            <img src={"/hero.png"} className=" scale-[1.4]" />
           </motion.div>
         </div>
       </Section>
@@ -395,9 +395,9 @@ function AboutSupport(){
           <div className="flex h-full flex-col justify-between">
             <div>
               <div className="text-xs uppercase tracking-wide text-zinc-400 mb-1">Over</div>
-              <div className="text-5xl font-black text-[var(--lime)]">900 K+</div>
+              <div className="text-5xl font-black text-[var(--lime)]">600 K+</div>
               
-              <div className="mt-1 text-sm text-zinc-400">impressions over X via our ecosystem projects.</div>
+              <div className="mt-1 text-sm text-zinc-400">impressions and visibility across projects&apos; socials.</div>
             </div>
           </div>
         </TiltCard>
