@@ -245,24 +245,64 @@ function Hero(){
         <div className="absolute right-0 top-0 h-[24rem] w-[24rem] rounded-full bg-emerald-400/10 blur-3xl"/>
       </div>
 
-      <Section className="pt-14 pb-12 md:pt-20 md:pb-16">
-        <div className="grid items-center gap-10 md:grid-cols-2">
-          <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:0.6}}>
-            <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#14171a] px-3 py-1 text-xs font-semibold tracking-wide text-[var(--lime)] ring-1 ring-[#2a2f34]"><Dot className="animate-pulse"/>{timeLeft.days > 0 || timeLeft.hours > 0 || timeLeft.minutes > 0 || timeLeft.seconds > 0
-        ? <>Application ends in {timeLeft.days} D {timeLeft.hours} H {timeLeft.minutes} M</>
-        : <>Registration closed</>}</p>
-            <h1 className="text-4xl font-black tracking-tight sm:text-5xl orbitron leading-16">
-              From <Lime>Pre‑MVP</Lime> to <span className="text-white">Successful Launches</span>
-            </h1>
-            <p className="mt-4 max-w-xl text-zinc-300">
-              Hack2Launch is the sprint where real projects are forged—from prototype to public launch—with hands‑on token design, launch ops, and growth.
-            </p>
-            {/* <p className="text-(--lime) font-black mt-5"><span className="animate-pulse">📅</span>{" "}Deadline for Hack2Launch 1: November 11th, 2025</p> */}
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <ShinyButton href="https://t.co/WMiU1WN8ow" target="_blank" rel="noopener noreferrer">Apply for Hack2Launch</ShinyButton>
-              <a href="https://dcodeblock.com" target="_blank" rel="noopener noreferrer" className="rounded-xl border border-[#2a2f34] px-5 py-3 text-sm font-semibold text-white hover:bg-white/5">See Past Launches</a>
-            </div>
-          </motion.div>
+<Section className="pt-14 pb-12 md:pt-20 md:pb-16">
+  <div className="grid items-center gap-10 md:grid-cols-2">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#14171a] px-3 py-1 text-xs font-semibold tracking-wide text-[var(--lime)] ring-1 ring-[#2a2f34]">
+        <Dot className="animate-pulse" />
+        {timeLeft.days > 0 || timeLeft.hours > 0 || timeLeft.minutes > 0 || timeLeft.seconds > 0
+          ? <>Application ends in {timeLeft.days} D {timeLeft.hours} H {timeLeft.minutes} M</>
+          : <>Registration closed</>}
+      </p>
+
+      <h1 className="text-4xl font-black tracking-tight sm:text-5xl orbitron leading-16">
+        From <Lime>Pre-MVP</Lime> to <span className="text-white">Successful Launches</span>
+      </h1>
+
+      <p className="mt-4 max-w-xl text-zinc-300">
+        Hack2Launch is the sprint where real projects are forged—from prototype to public launch—with hands-on token design, launch ops, and growth.
+      </p>
+
+      <div className="mt-6 flex flex-wrap items-center gap-3">
+        <ShinyButton
+          href="https://t.co/WMiU1WN8ow"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Apply for Hack2Launch
+        </ShinyButton>
+
+        <a
+          href="https://dcodeblock.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-xl border border-[#2a2f34] px-5 py-3 text-sm font-semibold text-white hover:bg-white/5"
+        >
+          See Past Launches
+        </a>
+      </div>
+    </motion.div>
+
+    {/* HERO MEDIA */}
+    <motion.div style={{ y }} className="relative flex justify-center md:justify-end">
+      <div className="aspect-[16/10] w-full max-w-[500px] overflow-hidden rounded-3xl ring-1 ring-[#1b2025] bg-[#0f1215] shadow-[0_20px_60px_rgba(197,243,44,0.08)]">
+        <img
+          src="/hero.png"
+          alt="Hero visual"
+          className="w-full h-full object-contain scale-100 md:scale-105"
+        />
+      </div>
+
+      {/* Decorative Glow */}
+      <div className="pointer-events-none absolute -bottom-6 -left-6 hidden h-28 w-28 rounded-2xl bg-[var(--lime)]/20 blur-2xl md:block" />
+    </motion.div>
+  </div>
+</Section>
 
           {/* ASSET SLOT: Hero media */}
           <motion.div style={{y}} className="relative">
