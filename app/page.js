@@ -243,7 +243,7 @@ function Hero() {
 
   useEffect(() => {
     // Set your registration end date (UTC or local)
-    const targetDate = new Date("2025-11-12T11:59:59Z"); // midnight UTC on Nov 12
+    const targetDate = new Date("2025-11-14T11:59:59Z"); // midnight UTC on Nov 12
 
     const interval = setInterval(() => {
       const now = new Date();
@@ -306,9 +306,7 @@ function Hero() {
             </h1>
 
             <p className="mt-4 max-w-xl text-zinc-300">
-              Hack2Launch is the sprint where real projects are forged—from
-              prototype to public launch—with hands-on token design, launch ops,
-              and growth.
+              Hack2Launch is a focused builder sprint that turns prototypes into live launches, with hands-on token design, launch ops, and growth execution.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -356,9 +354,15 @@ function Band() {
   const items = [
     "GROWTH",
     "BUILD THE FUTURE",
-    "STARTUP SUPPORT",
-    "CREATE",
-    "LAUNCH",
+    "LAUNCH READY",
+    "BUILT DIFFERENT",
+    "EARN FROM DAY ONE",
+    "LAUNCH SPRINT",
+    "BUILDER VELOCITY",
+    "IDEA TO IMPACT",
+    "BUILDER FIRST. ALWAYS",
+    "PROJECT MOMENTUM",
+    "MICRO LAUNCH"
   ];
   return (
     <div className="orbitron">
@@ -698,9 +702,11 @@ function Eligibility() {
   ];
   return (
     <Section id="eligibility" className="py-16">
-      <H2 kicker="ELIGIBILITY & CRITERIA">Who can apply</H2>
+      <H2 kicker="ELIGIBILITY CRITERIA">Who can apply</H2>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        <TiltCard>
+      <div className="flex flex-col gap-4">
+                <TiltCard>
+                  <img src="/cover.png" className="rounded-md mb-4 h-[110px] w-full" />
           <ul className="space-y-3">
             {bullets.map((b, i) => (
               <li
@@ -713,6 +719,7 @@ function Eligibility() {
             ))}
           </ul>
         </TiltCard>
+      </div>
         <TiltCard>
           <div className="mb-3 text-sm text-zinc-400">Evaluation signals</div>
           <div className="space-y-3">
